@@ -5,7 +5,7 @@
  * @param {Function} callback - The function to be called whenever a change is detected.
  *                             It takes three parameters: the property name, the action ('get' or 'set'),
  *                             and the new value (for 'set' action only).
- * @return {Object} A proxy object that wraps the original object and intercepts property accesses.
+ * @return {Object} A proxy object that wraps the original object and runs callback on property access.
  */
 function observeObject(obj, callback) {
     return new Proxy(obj, {
