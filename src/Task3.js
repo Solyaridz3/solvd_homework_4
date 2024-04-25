@@ -1,11 +1,14 @@
 const bankAccount = {
     balance: 1000,
+
     get formattedBalance() {
         return '$' + this.balance;
     },
+
     set newBalance(balance) {
         this.balance = balance;
     },
+
     transfer(targetAccount, amount) {
         if (this.balance < amount) {
             throw new Error('Not enough money to transfer')

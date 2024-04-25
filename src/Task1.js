@@ -1,6 +1,6 @@
 import {createImmutableObject} from "./Task4.js";
 
-const person = createImmutableObject({
+export const person = createImmutableObject({
     firstName: "John",
     lastName: "Doe",
     age: 30,
