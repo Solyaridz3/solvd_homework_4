@@ -1,5 +1,11 @@
 import {person} from './Task1.js';
-
+/**
+ * Validates an object with given schema
+ *
+ * @param {Object} obj - The object to be validated
+ * @param {Object} schema - The schema to validate
+ * @return {boolean} Returns true if the object is valid, false otherwise
+ */
 function validateObject(obj, schema) {
     for (let key in schema) {
         if (schema.hasOwnProperty(key)) {

@@ -5,6 +5,10 @@ export const person = createImmutableObject({
     lastName: "Doe",
     age: 30,
     email: "john.doe@example.com",
+    /**
+     * Updates the information of the object with the provided new information.
+     * @param {object} newInfo - The new information to update the object with.
+     */
     updateInfo(newInfo) {
         for (const key in newInfo) {
             if (this.hasOwnProperty(key)) {

@@ -1,3 +1,10 @@
+/**
+ * Creates a deep clone of an object, handling circular references
+ *
+ * @param {Object} obj - The object to be cloned
+ * @param {WeakMap} [visited=new WeakMap()] - A WeakMap used to keep track of visited objects
+ * @return {Object} - A deep clone of the input object
+ */
 function deepCloneObject(obj, visited = new WeakMap()) {
     if (obj === null || typeof obj !== 'object') {
         return obj; // primitive types or null

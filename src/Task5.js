@@ -1,3 +1,12 @@
+/**
+ * Creates a proxy object that observes changes to the original object.
+ *
+ * @param {Object} obj - The original object to be observed.
+ * @param {Function} callback - The function to be called whenever a change is detected.
+ *                             It takes three parameters: the property name, the action ('get' or 'set'),
+ *                             and the new value (for 'set' action only).
+ * @return {Object} A proxy object that wraps the original object and intercepts property accesses.
+ */
 function observeObject(obj, callback) {
     return new Proxy(obj, {
         get(target, prop) {
