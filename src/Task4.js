@@ -1,3 +1,4 @@
+import {person} from "./Task1.js";
 /**
  * Creates a read only version of the given object.
  *
@@ -9,6 +10,9 @@ export function createImmutableObject(obj) {
     for (const key in descriptors) {
         if (descriptors[key].writable) {
             descriptors[key].writable = false;
+        }
+        if(descriptors[key].configurable){
+            descriptors[key].configurable = false;
         }
         // handle nested arrays and objects recursively
         if (descriptors[key].value !== null && typeof descriptors[key].value === 'object') {
@@ -22,9 +26,5 @@ export function createImmutableObject(obj) {
 
 // Use the createImmutableObject function to create an
 // immutable version of the person object from Task 1.
-// Did it in Task 1
 
-
-
-
-
+const immutablePerson = createImmutableObject(person);
